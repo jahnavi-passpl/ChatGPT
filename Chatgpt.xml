@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+  <Id>Your-Add-In-ID</Id>
+  <Version>1.0</Version>
+  <ProviderName>Your-Provider-Name</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName>ChatGPT for Outlook</DisplayName>
+  <Description>An Outlook add-in using OpenAI's GPT-3 API.</Description>
+  <IconUrl DefaultValue="https://example.com/icon.png" />
+  <AppDomains>
+    <AppDomain>https://api.openai.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="MessageRead" />
+    <Host Name="MessageCompose" />
+  </Hosts>
+  <Permissions>ReadWriteItem</Permissions>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://your-add-in-webpage.com/taskpane.html" />
+  </DefaultSettings>
+  <Action xsi:type="ShowTaskpane">
+    <SourceLocation DefaultValue="https://your-add-in-webpage.com/taskpane.html" />
+  </Action>
+</OfficeApp>
